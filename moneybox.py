@@ -7,7 +7,7 @@ import traitlets
 from traitlets.config.configurable import Configurable
 from traitlets.config.configurable import SingletonConfigurable
 
-
+# motor movement, look at Jetbot tutorial. Link in readme
 class Motor(Configurable):
 
     value = traitlets.Float()
@@ -100,9 +100,9 @@ class Robot(SingletonConfigurable):
         self.right_motor.value = 0
 
 
-network = jetson.inference.detectNet(argv=['--model=/jetson-inference/python/training/detection/ssd/models/ssd-mobilenet.onnx', '--labels=/jetson-inference/python/training/detection/ssd/models/labels.txt', '--input-blob=input_0', '--output-cvg=scores', '--output-bbox=boxes'], threshold=0.8)
+network = jetson.inference.detectNet(argv=['--model=/jetson-inference/python/training/detection/ssd/models/ssd-mobilenet.onnx', '--labels=/jetson-inference/python/training/detection/ssd/models/labels.txt', '--input-blob=input_0', '--output-cvg=scores', '--output-bbox=boxes'])
 
-camera = jetson.utils.videoSource("/dev/video0")
+camera = jetson.utils.videoSource("/dev/video0") #change video device if necessary
 
 display = jetson.utils.videoOutput()
 
@@ -121,7 +121,7 @@ while True:
 	
 	detectionList = []
 
-	while detectionTimer <= 55:
+	while detectionTimer <= 55: #to take the max present argument in 55 frames, approximately 1.5 seconds
 		image = camera.Capture()
 		detection = network.Detect(image)
 		display.Render(image)	
@@ -135,14 +135,14 @@ while True:
 		except:
 			detectionTimer += 1
 
-	if int(most_common_detection) == 6 and flag == 1: 	
+	if int(most_common_detection) == 6 and flag == 1: 	# money is being put into moneybox
 		i = 'putMoney'
 		flag = 0
 			
-	elif int(most_common_detection) == 7 and flag == 1: 
+	elif int(most_common_detection) == 7 and flag == 1:   # money is being taken out of the moneybox
 		i = 'takeMoney'
 		flag = 0
-		robot.left(speed=0.3)
+		robot.left(speed=0.3)  # box's roof opens before money detection if money is being taken out of the moneybox
 		time.sleep(1)
 		robot.right(speed=0.3)
 		time.sleep(1)
@@ -215,7 +215,7 @@ while True:
 	if printFlag == 1:
 		print('moneySum:', moneySum)
 		printFlag=0
-		if i == 'putMoney':
+		if i == 'putMoney': # box's roof opens after money detection if money is being put into moneybox
 			robot.left(speed=0.3)
 			time.sleep(1)
 			robot.right(speed=0.3)
