@@ -13,6 +13,6 @@ The workflow is simple. User shows his/her hand to the camera in desired positio
 ### How to Run?
 1. Build Jetson-Inference from source with [this guide](https://github.com/dusty-nv/jetson-inference/blob/master/docs/building-repo-2.md#quick-reference)
 2. Clone the project 
-'''
+```
 git clone https://github.com/yigitee/moneybox.git
-'''
+```
