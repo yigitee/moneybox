@@ -9,4 +9,10 @@ Children are imposed to save money and stop spending their money for unuseful pr
 - A Box
 ### How Does It Work?
 Model dataset has been collected manually (5-10-20-50-100 Turkish Liras and 2 hand gestures to identify the money's situation whether it is getting in the money box or getting out from it). I have used the widget that has been created by the [Jetson-inference](https://github.com/dusty-nv/jetson-inference) library. The widget can be used from [here](https://github.com/dusty-nv/jetson-inference/blob/master/docs/pytorch-collect-detection.md). Also, the training script is present in the [same page](https://github.com/dusty-nv/jetson-inference/blob/master/docs/pytorch-collect-detection.md). \
-The workflow is simple. User shows his/her hand to the camera in desired position to determine the moneyflow direction, in to or out of the moneybox. Later on, the camera detects the money and displays its magnitude. The magnitude of the money is substracted from or added to the total money displayed in the terminal.
+The workflow is simple. User shows his/her hand to the camera in desired position to determine the moneyflow direction, in to or out of the moneybox. Later on, the camera detects the money and displays its magnitude. The magnitude of the money is substracted from or added to the total money displayed in the terminal. Moneybox's top automatically opens and closes according to the inputs given by the user to the camera. The motor's rotation is achieved via the functions and classes that are declared in the [Jetbot Tutorial](https://github.com/NVIDIA-AI-IOT/jetbot). 
+### How to Run?
+1. Build Jetson-Inference from source with [this guide](https://github.com/dusty-nv/jetson-inference/blob/master/docs/building-repo-2.md#quick-reference)
+2. Clone the project 
+'''
+git clone https://github.com/yigitee/moneybox.git
+'''
