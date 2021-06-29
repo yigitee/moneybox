@@ -4,7 +4,7 @@ Children are imposed to save money and stop spending their money for unuseful pr
 
 
 <div align="center">
-  <img alt="header" width="50%" src="![Moneybox](https://user-images.githubusercontent.com/86590210/123767254-009cb800-d8d0-11eb-832d-10fbcd6700a0.jpg"/>
+  <img alt="header" width="50%" src="media/Moneybox.jpg"/>
 </div>
 <br>
 
