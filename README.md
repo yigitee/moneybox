@@ -8,9 +8,6 @@ Children are imposed to save money and stop spending their money for unuseful pr
 </div>
 <br>
 
-
-  
-  
 ## Project
 ### Peripheral Devices
 - Logitech C270 Webcam
