@@ -4,7 +4,6 @@ Children are imposed to save money and stop spending their money for unuseful pr
 <div align="center">
   <img alt="header" width="50%" src="media/Moneybox.jpg"/>
 </div>
-<br>
 ## Project
 ### Peripheral Devices
 - Logitech C270 Webcam
