@@ -1,11 +1,9 @@
 # Intelligent Moneybox on Jetson Nano
 ## Motivation
 Children are imposed to save money and stop spending their money for unuseful products. They are given a moneybox and taught to save their money and hold them in their given moneyboxes. This is an appropriate approach to saving money. However, when time comes to summing up and declaring their total "wealth", things get a bit complicated. There can be various kinds of money magnitudes such as $5, $10... Grouping them, counting them, adding them up can be time consuming, and to be honest, a bit boring. Intelligent Moneybox can help solving this issue! 
-<br>
-
-<div align="center">
-  <img alt="header" width="65%" src="media/Moneybox.jpg">
-</div><br>
+<p align="center">
+<img src="media/Moneybox.jpg">
+</p>
 ## Project
 ### Peripheral Devices
 - Logitech C270 Webcam
